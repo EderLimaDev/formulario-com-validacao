@@ -1,3 +1,4 @@
+import { Cadastro } from "./pages/Cadastro/Cadastro";
 
 
 function App() {
@@ -5,8 +6,7 @@ function App() {
   return (
     <>
       <main>
-        <h1>Seja bem vindo! :)</h1>
-        <p>Terceiro Desafio: Formulário de Cadastro de Membros</p>
+        <Cadastro />
       </main>
     </>
   );
