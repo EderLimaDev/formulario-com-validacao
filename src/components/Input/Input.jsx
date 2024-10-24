@@ -10,12 +10,13 @@ export const Input = ({ type, placeholder, register, errorMessage, name }) => {
           placeholder={placeholder}
           name={name}
           {...register(name)}
-         
         />
-         {errorMessage && <p className="text-red-600 text-sm mt-2 ml-3">{errorMessage.message}</p>}
-
+        {errorMessage && (
+          <p className="text-red-600 text-sm mt-2 ml-3">
+            {errorMessage.message}
+          </p>
+        )}
       </div>
-      
     </>
   );
 };
