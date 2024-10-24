@@ -6,8 +6,12 @@ import { userValidationSchema } from "../../validations/userValidation";
 import { Button } from "../../components/Button/Button";
 import { Select } from "../../components/Select/Select";
 import optionList from "../../utils/roles";
+import { useNavigate } from 'react-router-dom';
 
 export const Cadastro = () => {
+
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -17,7 +21,11 @@ export const Cadastro = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    if(data) {
+      localStorage.setItem('cadastro', JSON.stringify(data))
+    }
+    navigate('/welcome');
+    alert("Cadastro Realizado com Sucesso!!")
   };
 
   return (
@@ -56,7 +64,7 @@ export const Cadastro = () => {
           errorMessage={errors.telefone}
         />
 
-        <Select options={optionList} errorMessage={errors.cargo} />
+        <Select options={optionList} errorMessage={errors.cargo} register={register} />
 
         <Input
           placeholder="Link do LinkedIn (Opcional)"
