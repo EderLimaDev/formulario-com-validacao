@@ -1,4 +1,4 @@
-import { Cadastro } from "./pages/Cadastro/Cadastro";
+import { Register } from "./pages/Register/Register";
 
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <main>
-        <Cadastro />
+        <Register />
       </main>
     </>
   );

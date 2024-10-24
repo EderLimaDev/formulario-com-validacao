@@ -8,7 +8,7 @@ import { Select } from "../../components/Select/Select";
 import optionList from "../../utils/roles";
 import { useNavigate } from 'react-router-dom';
 
-export const Cadastro = () => {
+export const Register = () => {
 
   const navigate = useNavigate();
 
